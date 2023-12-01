@@ -42,10 +42,12 @@ app.listen(port, function () {
   console.log(`click on http://localhost:${port}`);
 });
 
+
 let URLmodel = mongoose.model(
   "ShortURL",
   new mongoose.Schema({
     ShortUrl: String,
+    AddedDate: Date,
     Original_URL: String,
   })
 );
@@ -61,6 +63,7 @@ app.post("/api/shorturl", (req, res) => {
     } else {
       const urlToBeInserted = new URLmodel({
         ShortUrl: id,
+        AddedDate: new Date(),
         Original_URL: oriUrl,
       });
 
