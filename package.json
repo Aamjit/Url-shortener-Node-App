@@ -16,8 +16,7 @@
     "express": "^4.17.1",
     "mongodb": "^4.2.2",
     "mongoose": "^6.1.2",
-    "shortid": "^2.2.16",
-    "url": "^0.11.0"
+    "shortid": "^2.2.16"
   },
   "license": "MIT",
   "devDependencies": {

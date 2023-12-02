@@ -58,7 +58,7 @@ app.post("/api/shorturl", (req, res) => {
   let oriUrl = req.body.url;
   let id = shortid.generate();
 
-  dns.lookup(url.parse(oriUrl).hostname, (err, address) => {
+  dns.lookup(new URL(oriUrl).hostname, (err, address) => {
     if (!address) {
       res.json({ error: "invalid url" });
     } else {
