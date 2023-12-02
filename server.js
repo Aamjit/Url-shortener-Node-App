@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // connection to database
+mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MDB, (err) => {
   if (err) {
     console.log("Connection to Mongo failed.");
