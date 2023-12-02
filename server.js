@@ -92,3 +92,6 @@ app.get("/api/shorturl/:shorturl", (req, res) => {
     }
   });
 });
+
+
+module.exports = app;
